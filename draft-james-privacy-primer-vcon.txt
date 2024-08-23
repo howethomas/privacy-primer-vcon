@@ -81,16 +81,16 @@ Table of Contents
    1.  Introduction
    2.  Conventions and Definitions
    3.  Goal
-     3.1.  *1.  Privacy and vCon – In General*
-     3.2.  *2.  Data privacy*
+     3.1.  *Privacy and vCon – In General*
+     3.2.  *Data privacy*
        3.2.1.  *Key Roles in Data Processing*
        3.2.2.  *What Rights in Their Data do Consumers Have?*
        3.2.3.  *What Data Is Protected?*
        3.2.4.  Sensitive Data
        3.2.5.  *What Data Isn’t Protected?*
        3.2.6.  *Aggregation/Anonymization*
-     3.3.  *3.  Communications Privacy*
-       3.3.1.  *4.  Key Privacy Principles*
+     3.3.  *Communications Privacy*
+       3.3.1.  *Key Privacy Principles*
    4.  Security Considerations
    5.  IANA Considerations
      5.1.  *Informative References*
@@ -205,7 +205,7 @@ Table of Contents
    à-vis organizations that collect, process, and disclose consumer
    data.
 
-3.1.  *1.  Privacy and vCon – In General*
+3.1.  *Privacy and vCon – In General*
 
    Privacy in general can be understood as “the right to be let alone”
    [Warren, S.  D., & Brandeis, L.  D. (1890).  The Right to Privacy.
@@ -223,7 +223,7 @@ Table of Contents
    In the context of vCon, we will concentrate on *data privacy* and
    *communications privacy.*
 
-3.2.  *2.  Data privacy*
+3.2.  *Data privacy*
 
    Data privacy, also known as information privacy or data protection,
    refers to the practice of safeguarding individuals' personal
@@ -539,7 +539,7 @@ Table of Contents
    identification risks and the potential for unintended consequences
    when working with large datasets.
 
-3.3.  *3.  Communications Privacy*
+3.3.  *Communications Privacy*
 
    Communications privacy is a critical concern in our increasingly
    interconnected world, where various forms of communication –
@@ -607,7 +607,7 @@ Table of Contents
    interpretation of these provisions can vary significantly between
    different legal frameworks.
 
-3.3.1.  *4.  Key Privacy Principles*
+3.3.1.  *Key Privacy Principles*
 
    Data privacy and communications privacy are guided by similar
    principles, emphasizing consent, transparency, and data minimization
