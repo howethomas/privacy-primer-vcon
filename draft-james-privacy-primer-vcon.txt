@@ -5,8 +5,8 @@
 Network Working Group                                           D. James
 Internet-Draft                                Marashlian & Donahue, PLLC
 Intended status: Informational                          T. McCarthy-Howe
-Expires: 24 February 2025                                        Strolid
-                                                          23 August 2024
+Expires: 25 March 2025                                           Strolid
+                                                       21 September 2024
 
 
                    Privacy Primer for vCon Developers
@@ -60,7 +60,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 February 2025.
+   This Internet-Draft will expire on 25 March 2025.
 
 Copyright Notice
 
@@ -83,21 +83,20 @@ Table of Contents
      1.2.  Intended Audience
      1.3.  Goals of this Document
    2.  Conventions and Definitions
-   3.  Goal
-     3.1.  Privacy and vCon – In General
-     3.2.  Data privacy
-       3.2.1.  Key Roles in Data Processing
-       3.2.2.  What Rights in Their Data do Consumers Have?
-       3.2.3.  What Data Is Protected?
-       3.2.4.  Sensitive Data
-       3.2.5.  What Data Isn’t Protected?
-       3.2.6.  Aggregation/Anonymization
-     3.3.  Communications Privacy
-       3.3.1.  Key Privacy Principles
-   4.  Security Considerations
-   5.  IANA Considerations
-     5.1.  Informative References
-   6.  Normative References
+     2.1.  Privacy and vCon – In General
+     2.2.  Data privacy
+       2.2.1.  Key Roles in Data Processing
+       2.2.2.  What Rights in Their Data do Consumers Have?
+       2.2.3.  What Data Is Protected?
+       2.2.4.  Sensitive Data
+       2.2.5.  What Data Isn’t Protected?
+       2.2.6.  Deidentification/Anonymization
+       2.2.7.  Aggregation/Anonymization
+     2.3.  Communications Privacy
+       2.3.1.  Key Privacy Principles
+   3.  Security Considerations
+   4.  IANA Considerations
+   5.  Normative References
    Acknowledgments
    Authors' Addresses
 
@@ -125,15 +124,22 @@ Table of Contents
 1.1.  Purpose of this Document
 
    This document serves as a primer for individuals and organizations
-   grappling with the challenges of responsible personal data management
-   in the digital age.  It aims to provide a foundational understanding
-   of key topics, explaining their importance and how they are addressed
-   (or not) within the vCon framework.  While the vCon is not a panacea,
-   it offers a structure that enables well-intentioned actors to operate
-   ethically and responsibly.  Much like the distinction between HTTP
-   and HTTPS, where HTTPS is trusted by default and HTTP is not, the
-   vCon framework provides a basis for trust, with legal systems
-   managing those who operate outside its principles.
+   grappling with the challenges of responsible management of personal
+   data, including biometric information contained in audio and video
+   recordings, or other sources of sensitive information, in messaging
+   or other personal communications.  It aims to provide a foundational
+   understanding of key topics, explaining their importance and how they
+   are addressed (or not) within the vCon framework.  While the vCon is
+   not a panacea, it offers a structure that enables well-intentioned
+   actors to operate ethically and responsibly.  Much like the
+   distinction between HTTP and HTTPS, where HTTPS is trusted by default
+   and HTTP is not, the vCon framework provides a basis for trust, with
+   legal systems managing those who operate outside its principles.
+   IETF standards already address privacy in Internet communications,
+   including the principle of data minimization [RFC 7258].  However,
+   those standards generally do not address the privacy of consumer data
+   privacy vis-à-vis organizations that collect, process, and disclose
+   consumer data¶
 
 1.2.  Intended Audience
 
@@ -190,22 +196,7 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Goal
-
-   To act as a primer to technical professionals involved with managing
-   personal data, including biometric information contained in audio and
-   video recordings, or other sources of sensitive information, in
-   messaging or other personal communications.  Issues, ethics,
-   legalities and relevant IETF work should be referenced as
-   appropriate.
-
-   IETF standards already address privacy in Internet communications,
-   including the principle of data minimization [RFC 7258].  However,
-   those standards generally do not address consumer data privacy vis-
-   à-vis organizations that collect, process, and disclose consumer
-   data.
-
-3.1.  Privacy and vCon – In General
+2.1.  Privacy and vCon – In General
 
    Privacy in general can be understood as “the right to be let alone”
    [Warren, S.  D., & Brandeis, L.  D. (1890).  The Right to Privacy.
@@ -223,7 +214,7 @@ Table of Contents
    In the context of vCon, we will concentrate on *data privacy* and
    *communications privacy.*
 
-3.2.  Data privacy
+2.2.  Data privacy
 
    Data privacy, also known as information privacy or data protection,
    refers to the practice of safeguarding individuals' personal
@@ -245,15 +236,16 @@ Table of Contents
    pre-emption relationships between them, creating a fragmented and
    multifaceted regulatory environment.
 
-   This document outlines common privacy rights and obligations in
-   alignment with fair information practices (FIP), which are widely
-   recognized principles but may or may not be legally required,
-   depending on the jurisdiction.  The framework presented here offers a
-   general understanding of data privacy principles but does not
-   guarantee legal compliance in any specific region.  Readers are
-   encouraged to seek legal advice for their particular situations.
+   This document outlines common privacy rights and obligations as of
+   the time of this writing (September, 2024) in alignment with fair
+   information practices (FIP), which are widely recognized principles
+   but may or may not be legally required, depending on the
+   jurisdiction.  The framework presented here offers a general
+   understanding of data privacy principles but does not guarantee legal
+   compliance in any specific region.  Readers are encouraged to seek
+   legal advice for their particular situations.
 
-3.2.1.  Key Roles in Data Processing
+2.2.1.  Key Roles in Data Processing
 
    The following terms are used by the GDPR and in the privacy industry
    in general to define the three key roles in data processing:
@@ -269,8 +261,9 @@ Table of Contents
        data protection regulations.
 
    3.  *Data Processor*: Often a third-party service provider who
-       processes data on behalf of the data controller.  Under HIPAA,
-       data processors are referred to as "business associates."  Data
+       processes data on behalf of the data controller.  Under Health
+       Insurance Portability and Accountability Act (HIPAA), data
+       processors are referred to as "business associates."  Data
        processors may be hired for specialized tasks or to improve
        efficiency; can subcontract to other processors, creating a chain
        of responsibility; must operate within the scope defined by the
@@ -283,7 +276,7 @@ Table of Contents
    these boundaries.  This structure ensures accountability and helps
    maintain data privacy throughout the information processing chain.
 
-3.2.2.  What Rights in Their Data do Consumers Have?
+2.2.2.  What Rights in Their Data do Consumers Have?
 
    Regarding individual rights in data privacy, organizations should
    focus on six key areas:
@@ -299,13 +292,12 @@ Table of Contents
 
    2.  *Consent*: Organizations need to obtain data subjects’ informed
        and freely given consent for collecting, using, storing, and
-       sharing personal data.  Different levels of consent consent may
-       apply to different kinds of data or in different jurisdictions:
+       sharing personal data.  Different levels of consent may apply to
+       different kinds of data or in different jurisdictions:
 
        *  Consent can be affirmative (“opt-in” consent) or presumed
           unless stated otherwise (“opt-out” consent).  Opt-in consent
-          is usually required for sensitive data and children’s data
-          (under 13 or 16 years old).
+          is usually required for sensitive data processing.
 
        *  Consent can be written, oral, or implied.
 
@@ -345,7 +337,7 @@ Table of Contents
    approach aligns with many modern data protection regulations and best
    practices in privacy management.
 
-3.2.3.  What Data Is Protected?
+2.2.3.  What Data Is Protected?
 
    Data privacy laws protect personal information, though its scope can
    vary across different laws.  In general, the term “personal
@@ -384,15 +376,16 @@ Table of Contents
 
    *  Professional and educational information.
 
-3.2.4.  Sensitive Data
+2.2.4.  Sensitive Data
 
    An important subset of PII to consider in designing data privacy
    practices is so-called “sensitive data” which is subject to a higher
    standard of protection and requires additional privacy and security
    limitations to safeguard its collection, use and disclosure.  For
    example, it may require an opt-in consent for data collection and
-   processing.  In various jurisdictions sensitive information may
-   include the following:
+   processing.  In various jurisdictions sensitive information may may
+   now or in the near future (with regard to current bills, such as the
+   American Privacy Rights Act) include the following:
 
    *  Government-issued identifiers.
 
@@ -402,10 +395,12 @@ Table of Contents
 
    *  Financial data.
 
-   *  Biometric information.
+   *  Biometric information, including faceprints and voiceprints used
+      for identity recognition or verification.
 
    *  Precise geolocation data (information on a customer’s location
-      within a 1,850-foot radius around the consumer).
+      within a 1,850-foot radius around the consumer, as defined by
+      California Consumer Privacy Rights Act).
 
    *  Certain communications data – an individual's private
       communications, such as voicemails, emails, texts, direct messages
@@ -426,43 +421,71 @@ Table of Contents
 
    *  Sexual behavior.
 
-   *  Less commonly - *calendars, address book information, phone or
-      text logs, photos, audio recordings, or videos intended for
-      private use* typically stored on smartphones and tablets that
-      reveal personal information about an individual's daily habits and
-      social interactions.
+   *  Information revealing an individual's online activities over time
+      and across websites or online services that do not share common
+      branding or over time on any website or online service operated by
+      a covered high-impact social media company.
 
-   *  Less commonly - *transferred video viewing habit information* -
-      information revealing the extent or content of any individual's
-      access, viewing or other use of any video programming, including
-      by a provider of broadcast television service, cable service,
-      satellite service or streaming media service, but only concerning
-      the transfer of such information to a third party and excluding
-      any such data used solely for transfers for independent video
-      measurement.
+   *  Information about minors (17 years of age or younger).
 
-   *  *Online activity -* information revealing an individual's online
+   *  Certain communications data – an individual's private
+      communications, such as voicemails, emails, texts, direct messages
+      or mail, or information identifying the parties to such
+      communications, information contained in telephone bills, voice
+      communications, and any information that pertains to the
+      transmission of voice communications, including numbers called,
+      numbers from which calls were placed, the time calls were made,
+      call duration and location information of the parties to the call,
+      unless the covered entity is an intended recipient of the
+      communication.  Communications with businesses may be awarded less
+      protection.
+
+   *  Online activity - information revealing an individual's online
       activities over time and across websites or online services that
       do not share common branding or over time on any website or online
       service operated by a covered high-impact social media company.
 
-   *  Information about minors (17 years of age or younger).
+   *  Calendars, address book information, phone or text logs, photos,
+      audio recordings, or videos intended for private use** typically
+      stored on smartphones and tablets that reveal personal information
+      about an individual's daily habits and social interactions.
 
-3.2.5.  What Data Isn’t Protected?
+   *  Transferred video viewing habit information - information
+      revealing the extent or content of any individual's access,
+      viewing or other use of any video programming, including by a
+      provider of broadcast television service, cable service, satellite
+      service or streaming media service, but only concerning the
+      transfer of such information to a third party and excluding any
+      such data used solely for transfers for independent video
+      measurement.
+
+2.2.5.  What Data Isn’t Protected?
 
    The distinction between personal and nonpersonal information hinges
-   on identifiability.  This boundary can be ambiguous, with varying
-   interpretations across jurisdictions.  For instance, IP addresses are
-   considered personal information by the EU and FTC, but not by U.S.
-   federal agencies under the Privacy Act.
+   on identifiability, meaning that personal data is identifiable and
+   thus protected by most privacy laws when it can be reasonably linked
+   to a particular person (or even computer or device).  This boundary
+   can be ambiguous, with varying interpretations across jurisdictions.
+   For instance, IP addresses are considered personal information by the
+   EU and FTC, but not by U.S. federal agencies under the Privacy Act.¶
+   Moreover, sometimes, deidentified data can be reidentified,
+   introducing challenges to personal data protection.  When identifying
+   elements are removed from data, it becomes nonpersonal information,
+   generally falling outside the scope of privacy and data protection
+   laws.
 
-   When identifying elements are removed from data, it becomes
-   nonpersonal information, generally falling outside the scope of
-   privacy and data protection laws.  This process, known as
-   *deidentification or anonymization*, is often used for research,
-   statistics, or aggregated data analysis.  Several U.S. state
-   comprehensive privacy laws exclude deidentified and aggregate data
-   from the scope of personal information.
+   Some methods of transforming identifiable data into nonpersonal data
+   are deidentification, anonymization, and aggregation.  On the other
+   hand, pseudonymization (replacing identifiable data with pseudonyms/
+   unique codes) only temporarily removes identifiable data with the
+   possibility of relatively easy reidentification.  In many
+   jurisdictions pseudonymous data falls within the scope of personal
+   data when used in conjunction with additional information that
+   reasonably links the data to an identified or identifiable
+   individual.
+
+   Many jurisdictions remove *publicly available information* from the
+   scope of protected PI.
 
    *Pseudonymized data*, where individuals are represented by unique
    codes, is temporarily nonpersonal but can be reversed to reidentify
@@ -475,17 +498,38 @@ Table of Contents
    Many jurisdictions remove *publicly available information* from the
    scope of protected PI.
 
-3.2.6.  Aggregation/Anonymization
+2.2.6.  Deidentification/Anonymization
 
-   Data aggregation and anonymization are important techniques used in
-   the context of data privacy to protect individuals' personal
-   information while still allowing organizations to derive valuable
-   insights.  However, these methods are not without risks and
-   limitations.
+   Deidentification is the process of removing identifiable data from
+   the dataset/document.  It may take the form of information
+   suppression (direct removal of identifying information),
+   generalization (replacing a data element with a more general
+   equivalent), or noise addition (slightly altering select data).
+   Noise addition is the primary mechanism of differential privacy – a
+   mathematical framework designed to ensure the privacy of individuals
+   within a dataset while allowing for the extraction of useful
+   statistical information by adding carefully calibrated noise to the
+   data.  This ensures that the inclusion or exclusion of any single
+   individual's data does not significantly affect the outcome of the
+   analysis and adds a level of personal data protection.  Sometimes it
+   is possible to reidentify the deidentified data using other available
+   information.  In this context, although it is often used
+   interchangeably with the term “deidentification,” the term
+   “anonymization” refers to the more comprehensive irreversible removal
+   of identifiable data.  Rigorous deidentification or anonymization
+   techniques should be employed to ensure that reidentification is
+   either impossible or extremely difficult.¶
 
-   Data aggregation involves combining data from multiple sources or
-   individuals into summary form. While this can obscure individual
-   identities, there are still privacy concerns:
+2.2.7.  Aggregation/Anonymization
+
+   In the data privacy context, data aggregation is a data analytics
+   process whereby combined data from multiple sources or individuals
+   containing PII information is summarized, effectively removing PII
+   from the final product.  It can be used to protect individuals'
+   personal information while still allowing organizations to derive
+   valuable insights.  While aggregation can obscure individual
+   identities, there are still privacy concerns that should be
+   considered:¶
 
    1.  *Re-identification risk*: With enough granular data points, it
        may be possible to single out individuals even from aggregated
@@ -539,7 +583,7 @@ Table of Contents
    identification risks and the potential for unintended consequences
    when working with large datasets.
 
-3.3.  Communications Privacy
+2.3.  Communications Privacy
 
    Communications privacy is a critical concern in our increasingly
    interconnected world, where various forms of communication –
@@ -565,7 +609,7 @@ Table of Contents
        private communications or activities is generally prohibited by
        law.
 
-   2.  *Consent:* Many laws stipulate that at least one party must
+   2.  *Consent:* Most laws stipulate that at least one party must
        consent to the recording or interception of a communication.
        Some jurisdictions require all parties to consent, known as "two-
        party" or "all-party" consent.  The type of consent required
@@ -600,6 +644,8 @@ Table of Contents
    8.  *Security Measures:* Requirements for securing stored
        communications against unauthorized access, including encryption
        standards and access controls, are increasingly common.
+       Moreover, using encryption may in some cases absolve the data
+       processor from legal liability or at least mitigate it.¶
 
    Understanding these common provisions is crucial for compliance with
    communications privacy laws, regardless of the specific jurisdiction.
@@ -607,7 +653,7 @@ Table of Contents
    interpretation of these provisions can vary significantly between
    different legal frameworks.
 
-3.3.1.  Key Privacy Principles
+2.3.1.  Key Privacy Principles
 
    Data privacy and communications privacy are guided by similar
    principles, emphasizing consent, transparency, and data minimization
@@ -623,11 +669,11 @@ Table of Contents
         practices of seeking consent that effectively obscure, subvert,
         or impair the consumer’s autonomy, decision-making or choice
         (for example, confusing user interfaces or hidden disclosures)
-        are not allowed in most jurisdictions.
+        are prohibited in many jurisdictions.
 
    2.   *Notice/Transparency*: Organizations must clearly disclose their
         data handling practices.  Privacy notices should be concise,
-        transparent, and easily understood.  Changes to privacy
+        transparent, and easily understandable.  Changes to privacy
         practices must be promptly communicated.
 
    3.   *Purpose Limitation*: Personal data should be collected for
@@ -642,13 +688,14 @@ Table of Contents
 
    5.   *Storage Limitation*: Personal data should be retained only for
         as long as necessary to fulfill the purposes for which it was
-        collected.  Organizations should establish retention policies
-        and securely dispose of data that is no longer needed.
+        collected, consistent with legal limitations and requirements.
+        Organizations should establish retention policies and securely
+        dispose of data that is no longer needed.
 
-   6.   *Security*: Appropriate technical and organizational measures
-        must be implemented to protect personal data from unauthorized
-        access and other risks.  This may include encryption, access
-        controls, and regular security assessments.
+   6.   *Security*: Appropriate technical, physical and administrative
+        measures must be implemented to protect covered data from
+        unauthorized access and other risks.  This may include
+        encryption, access controls, and regular security assessments.
 
    7.   *Individual Rights*: Individuals have certain rights regarding
         their personal data, including the right to access their data,
@@ -657,8 +704,10 @@ Table of Contents
         and the right to data portability (the ability to transfer their
         data from one organization to another).
 
-   8.   *Accuracy*: Personal data should be accurate, complete, and up-
-        to-date.
+   8.   *Data Integrity*: Personal data should be accurate, complete,
+        up-to-date, and trustworthy throughout its lifecycle.  The core
+        principles of data integrity include consistency across systems,
+        authenticity verification, and non-repudiation mechanisms.¶
 
    9.   *Accountability*: Organizations are responsible for complying
         with data privacy laws and demonstrating compliance.  This may
@@ -680,12 +729,12 @@ Table of Contents
    to address emerging technologies and practices, ensuring the
    protection of personal information in our interconnected world.
 
-4.  Security Considerations
+3.  Security Considerations
 
    vCons contain sensitive conversational data, which raises several
-   security concerns, particularly regarding data integrity and personal
-   privacy.  The following points outline the key security
-   considerations for vCons:
+   data privacy and security concerns, particularly regarding data
+   integrity and personal privacy.  The following points outline the key
+   security considerations for vCons:
 
    1.   Data Integrity and Immutability
 
@@ -781,11 +830,73 @@ Table of Contents
    the privacy of individuals involved in conversations while
    maintaining the integrity and utility of the conversational data.
 
-5.  IANA Considerations
+4.  IANA Considerations
 
    This document has no IANA actions.
 
-5.1.  Informative References
+   [RFC7258] Farrell, S. and H.  Tschofenig, "Pervasive Monitoring Is an
+   Attack", BCP 188, RFC 7258, DOI 10.17487/RFC7258, May 2014,
+   https://www.rfc-editor.org/info/rfc7258 (https://www.rfc-
+   editor.org/info/rfc7258).
+
+   [Warren1890] Warren, S.  D., & Brandeis, L.  D., "The Right to
+   Privacy", Harvard Law Review, 4(5), 193-220, 1890.
+
+   [RFC6973] Cooper, A., Tschofenig, H., Aboba, B., Peterson, J.,
+   Morris, J., Hansen, M., and R.  Smith, "Privacy Considerations for
+   Internet Protocols", RFC 6973, DOI 10.17487/RFC6973, July 2013,
+   https://www.rfc-editor.org/info/rfc6973 (https://www.rfc-
+   editor.org/info/rfc6973).
+
+   [RFC8280] ten Oever, N. and C.  Cath, "Research into Human Rights
+   Protocol Considerations", RFC 8280, DOI 10.17487/RFC8280, October
+   2017, https://www.rfc-editor.org/info/rfc8280 (https://www.rfc-
+   editor.org/info/rfc8280).
+
+   [RFC3552] Rescorla, E. and B.  Korver, "Guidelines for Writing RFC
+   Text on Security Considerations", BCP 72, RFC 3552, DOI 10.17487/
+   RFC3552, July 2003, https://www.rfc-editor.org/info/rfc3552
+   (https://www.rfc-editor.org/info/rfc3552).
+
+   [RFC7624] Barnes, R., Schneier, B., Jennings, C., Hardie, T.,
+   Trammell, B., Huitema, C., and D.  Borkmann, "Confidentiality in the
+   Face of Pervasive Surveillance: A Threat Model and Problem
+   Statement", RFC 7624, DOI 10.17487/RFC7624, August 2015,
+   https://www.rfc-editor.org/info/rfc7624 (https://www.rfc-
+   editor.org/info/rfc7624).
+
+   [RFC6462] Cooper, A., "Report from the Internet Privacy Workshop",
+   RFC 6462, DOI 10.17487/RFC6462, January 2012, https://www.rfc-
+   editor.org/info/rfc6462 (https://www.rfc-editor.org/info/rfc6462).
+
+   [RFC7844] Huitema, C., Mrugalski, T., and S.  Krishnan, "Anonymity
+   Profiles for DHCP Clients", RFC 7844, DOI 10.17487/RFC7844, May 2016,
+   https://www.rfc-editor.org/info/rfc7844 (https://www.rfc-
+   editor.org/info/rfc7844).
+
+   [RFC8446] Rescorla, E., "The Transport Layer Security (TLS) Protocol
+   Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
+   https://www.rfc-editor.org/info/rfc8446 (https://www.rfc-
+   editor.org/info/rfc8446).
+
+   [RFC7858] Hu, Z., Zhu, L., Heidemann, J., Mankin, A., Wessels, D.,
+   and P.  Hoffman, "Specification for DNS over Transport Layer Security
+   (TLS)", RFC 7858, DOI 10.17487/RFC7858, May 2016, https://www.rfc-
+   editor.org/info/rfc7858 (https://www.rfc-editor.org/info/rfc7858).
+
+   [RFC6235] Boschi, E. and B.  Trammell, "IP Flow Anonymization
+   Support", RFC 6235, DOI 10.17487/RFC6235, May 2011, https://www.rfc-
+   editor.org/info/rfc6235 (https://www.rfc-editor.org/info/rfc6235).
+
+   [RFC8165] Hardie, T., "Design Considerations for Metadata Insertion",
+   RFC 8165, DOI 10.17487/RFC8165, May 2017, https://www.rfc-
+   editor.org/info/rfc8165 (https://www.rfc-editor.org/info/rfc8165).
+
+   [RFC7011] Claise, B., Ed., Trammell, B., Ed., and P.  Aitken,
+   "Specification of the IP Flow Information Export (IPFIX) Protocol for
+   the Exchange of Flow Information", STD 77, RFC 7011, DOI 10.17487/
+   RFC7011, September 2013, https://www.rfc-editor.org/info/rfc7011
+   (https://www.rfc-editor.org/info/rfc7011).
 
    [RFC6973] Cooper, A., Tschofenig, H., Aboba, B., Peterson, J.,
    Morris, J., Hansen, M., and R.  Smith, "Privacy Considerations for
@@ -842,7 +953,7 @@ Table of Contents
    https://www.rfc-editor.org/info/rfc7011 (https://www.rfc-
    editor.org/info/rfc7011).
 
-6.  Normative References
+5.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
