@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-10T00:26:21.542696+00:00",
+  "timestamp": "2024-10-13T00:29:07.732886+00:00",
   "repo": "howethomas/privacy-primer-vcon",
   "labels": [
     {
@@ -50,5 +50,83 @@
     }
   ],
   "issues": [],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOMnddkc5-YzC4",
+      "title": "Markdown and kramdown fixes",
+      "url": "https://github.com/howethomas/privacy-primer-vcon/pull/1",
+      "state": "OPEN",
+      "author": "SteveLasker",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Markdown and Kramdown fixes. No content changes.\r\n\r\n- Each sentence on its own line for easy PR feedback and editing\r\n- Numbers are always 1, to make insertions and deletions isolated\r\n- Moved the informative text to the top section, letting kramdown do all the reference generation\r\n ",
+      "createdAt": "2024-10-11T23:39:18Z",
+      "updatedAt": "2024-10-11T23:44:33Z",
+      "baseRepository": "howethomas/privacy-primer-vcon",
+      "baseRefName": "main",
+      "baseRefOid": "a421820324abed7c6c441c2169c7aca6b2d48f9a",
+      "headRepository": "SteveLasker/privacy-primer-vcon",
+      "headRefName": "main",
+      "headRefOid": "bc457cda1b27eb0bbe384553e765c26400a774f3",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMnddkc6M4tKk",
+          "commit": {
+            "abbreviatedOid": "bc457cd"
+          },
+          "author": "SteveLasker",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "Lots of great content. From a pure formatting perspective, I wasn't sure if \"\u00b6\" was intended to be kept, or was part of a copy/paste error. \r\n\r\nKramdown did complain the RFC references were in the appendix but not referenced in the doc. Might want to add the pointers with {{RFC1234}} sprinkled around, then check `make` for any errors for unused references.",
+          "createdAt": "2024-10-11T23:39:58Z",
+          "updatedAt": "2024-10-11T23:44:33Z",
+          "comments": [
+            {
+              "originalPosition": 52,
+              "body": "Was \"\u00b6\" intentionally to keep?\r\n```suggestion\r\nHowever, those standards generally do not address the privacy of consumer data privacy vis-\u00e0-vis organizations that collect, process, and disclose consumer data\r\n```",
+              "createdAt": "2024-10-11T23:39:58Z",
+              "updatedAt": "2024-10-11T23:42:43Z"
+            },
+            {
+              "originalPosition": 216,
+              "body": "intentionally \"\u00b6\" ?\r\n```suggestion\r\nFor instance, IP addresses are considered personal information by the EU and FTC, but not by U.S. federal agencies under the Privacy Act.\r\nMoreover, sometimes, deidentified data can be reidentified, introducing challenges to personal data protection.\r\n```",
+              "createdAt": "2024-10-11T23:40:42Z",
+              "updatedAt": "2024-10-11T23:42:43Z"
+            },
+            {
+              "originalPosition": 244,
+              "body": "```suggestion\r\nRigorous deidentification or anonymization techniques should be employed to ensure that reidentification is either impossible or extremely difficult.\r\n```",
+              "createdAt": "2024-10-11T23:40:58Z",
+              "updatedAt": "2024-10-11T23:42:44Z"
+            },
+            {
+              "originalPosition": 251,
+              "body": "```suggestion\r\nWhile aggregation can obscure individual identities, there are still privacy concerns that should be considered:\r\n```",
+              "createdAt": "2024-10-11T23:41:14Z",
+              "updatedAt": "2024-10-11T23:42:44Z"
+            },
+            {
+              "originalPosition": 317,
+              "body": "```suggestion\r\nMoreover, using encryption may in some cases absolve the data processor from legal liability or at least mitigate it.\r\n```",
+              "createdAt": "2024-10-11T23:41:31Z",
+              "updatedAt": "2024-10-11T23:42:44Z"
+            },
+            {
+              "originalPosition": 357,
+              "body": "```suggestion\r\nThe core principles of data integrity include consistency across systems, authenticity verification, and non-repudiation mechanisms.\r\n```",
+              "createdAt": "2024-10-11T23:41:44Z",
+              "updatedAt": "2024-10-11T23:42:44Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
