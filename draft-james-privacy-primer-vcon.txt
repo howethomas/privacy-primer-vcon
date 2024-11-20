@@ -5,8 +5,8 @@
 Network Working Group                                           D. James
 Internet-Draft                                Marashlian & Donahue, PLLC
 Intended status: Informational                          T. McCarthy-Howe
-Expires: 25 March 2025                                           Strolid
-                                                       21 September 2024
+Expires: 24 May 2025                                             Strolid
+                                                        20 November 2024
 
 
                    Privacy Primer for vCon Developers
@@ -60,7 +60,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 March 2025.
+   This Internet-Draft will expire on 24 May 2025.
 
 Copyright Notice
 
@@ -89,14 +89,16 @@ Table of Contents
        2.2.2.  What Rights in Their Data do Consumers Have?
        2.2.3.  What Data Is Protected?
        2.2.4.  Sensitive Data
-       2.2.5.  What Data Isn’t Protected?
+       2.2.5.  What Data Isn’t Protected
        2.2.6.  Deidentification/Anonymization
        2.2.7.  Aggregation/Anonymization
      2.3.  Communications Privacy
        2.3.1.  Key Privacy Principles
    3.  Security Considerations
    4.  IANA Considerations
-   5.  Normative References
+   5.  References
+     5.1.  Normative References
+     5.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -136,10 +138,10 @@ Table of Contents
    and HTTP is not, the vCon framework provides a basis for trust, with
    legal systems managing those who operate outside its principles.
    IETF standards already address privacy in Internet communications,
-   including the principle of data minimization [RFC 7258].  However,
+   including the principle of data minimization [RFC7258].  However,
    those standards generally do not address the privacy of consumer data
    privacy vis-à-vis organizations that collect, process, and disclose
-   consumer data¶
+   consumer data.
 
 1.2.  Intended Audience
 
@@ -316,15 +318,15 @@ Table of Contents
 
        *  right to port their data to a different data controller;
 
-       *  right opt out of certain data practices, such as sale of their
-          data, profiling, targeted/cross contextual behavioral
+       *  right to opt out of certain data practices, such as sale of
+          their data, profiling, targeted/cross contextual behavioral
           advertising, automated decision-making.
 
    5.  *Non-Discrimination*: Organizations must not discriminate against
        consumers who choose to exercise their data privacy rights.
 
    6.  *Breach Notification*: The large amounts of data held by
-       organizations attracts cybercriminals, increasing the risk of
+       organizations attracts cyber criminals, increases the risk of
        data breaches.  To mitigate the consequences of data breaches and
        incentivize advanced data security practices, most jurisdictions
        require prompt notification of affected individuals when breaches
@@ -346,7 +348,9 @@ Table of Contents
    individual or information about an “identified” or “identifiable”
    individual.  California extends the scope of PII to include
    information about a consumer and the consumer’s household, as well as
-   employment data.  Examples of PII include:
+   employment data.
+
+   Examples of PII include:
 
    *  Basic identifiers: Name, addresses (postal and email), government-
       issued identification numbers
@@ -354,7 +358,7 @@ Table of Contents
    *  Digital identifiers: IP address (in some jurisdictions like
       California).
 
-   *  Financial Data: financial account number or credit or debit card
+   *  Financial Data: financial account number, credit or debit card
       number, often in combination with any required security code or
       password that would permit access to a data subject’s financial
       account.
@@ -459,7 +463,7 @@ Table of Contents
       such data used solely for transfers for independent video
       measurement.
 
-2.2.5.  What Data Isn’t Protected?
+2.2.5.  What Data Isn’t Protected
 
    The distinction between personal and nonpersonal information hinges
    on identifiability, meaning that personal data is identifiable and
@@ -467,7 +471,7 @@ Table of Contents
    to a particular person (or even computer or device).  This boundary
    can be ambiguous, with varying interpretations across jurisdictions.
    For instance, IP addresses are considered personal information by the
-   EU and FTC, but not by U.S. federal agencies under the Privacy Act.¶
+   EU and FTC, but not by U.S. federal agencies under the Privacy Act.
    Moreover, sometimes, deidentified data can be reidentified,
    introducing challenges to personal data protection.  When identifying
    elements are removed from data, it becomes nonpersonal information,
@@ -518,7 +522,7 @@ Table of Contents
    “anonymization” refers to the more comprehensive irreversible removal
    of identifiable data.  Rigorous deidentification or anonymization
    techniques should be employed to ensure that reidentification is
-   either impossible or extremely difficult.¶
+   either impossible or extremely difficult.
 
 2.2.7.  Aggregation/Anonymization
 
@@ -529,7 +533,7 @@ Table of Contents
    personal information while still allowing organizations to derive
    valuable insights.  While aggregation can obscure individual
    identities, there are still privacy concerns that should be
-   considered:¶
+   considered:
 
    1.  *Re-identification risk*: With enough granular data points, it
        may be possible to single out individuals even from aggregated
@@ -639,13 +643,13 @@ Table of Contents
    7.  *Technology-Specific Provisions*: As technology evolves, laws may
        include specific provisions for different communication media,
        such as landlines, mobile phones, emails, instant messaging,
-       video calls, and Internet browsing activities.
+       video calls, and internet browsing activities.
 
    8.  *Security Measures:* Requirements for securing stored
        communications against unauthorized access, including encryption
        standards and access controls, are increasingly common.
        Moreover, using encryption may in some cases absolve the data
-       processor from legal liability or at least mitigate it.¶
+       processor from legal liability or at least mitigate it.
 
    Understanding these common provisions is crucial for compliance with
    communications privacy laws, regardless of the specific jurisdiction.
@@ -659,7 +663,9 @@ Table of Contents
    principles, emphasizing consent, transparency, and data minimization
    while balancing privacy rights with societal interests.  These areas
    aim to safeguard individuals' control over their personal
-   information, whether stored or transmitted.  Key principles include:
+   information, whether stored or transmitted.
+
+   Key principles include:
 
    1.   *Consent*: Must be freely given, specific, informed,
         unambiguous, revocable, and documented.  Consent may not be
@@ -707,7 +713,7 @@ Table of Contents
    8.   *Data Integrity*: Personal data should be accurate, complete,
         up-to-date, and trustworthy throughout its lifecycle.  The core
         principles of data integrity include consistency across systems,
-        authenticity verification, and non-repudiation mechanisms.¶
+        authenticity verification, and non-repudiation mechanisms.
 
    9.   *Accountability*: Organizations are responsible for complying
         with data privacy laws and demonstrating compliance.  This may
@@ -751,10 +757,13 @@ Table of Contents
            and sensitive data that must be safeguarded.
 
         *  Different levels of redaction may be necessary, as outlined
-           in Section 4.1.6 (redacted): a) PII masking: Removing PII
-           from text, audio, video, and transcripts b) De-
-           identification: Removing segments or whole recordings to
-           prevent voice printing or facial recognition
+           in Section 4.1.6 (redacted):
+
+           -  PII masking: Removing PII from text, audio, video, and
+              transcripts.
+
+           -  De-identification: Removing segments or whole recordings
+              to prevent voice printing or facial recognition.
 
    3.   Encrypted Storage and Transmission
 
@@ -834,126 +843,12 @@ Table of Contents
 
    This document has no IANA actions.
 
-   [RFC7258] Farrell, S. and H.  Tschofenig, "Pervasive Monitoring Is an
-   Attack", BCP 188, RFC 7258, DOI 10.17487/RFC7258, May 2014,
-   https://www.rfc-editor.org/info/rfc7258 (https://www.rfc-
-   editor.org/info/rfc7258).
-
    [Warren1890] Warren, S.  D., & Brandeis, L.  D., "The Right to
    Privacy", Harvard Law Review, 4(5), 193-220, 1890.
 
-   [RFC6973] Cooper, A., Tschofenig, H., Aboba, B., Peterson, J.,
-   Morris, J., Hansen, M., and R.  Smith, "Privacy Considerations for
-   Internet Protocols", RFC 6973, DOI 10.17487/RFC6973, July 2013,
-   https://www.rfc-editor.org/info/rfc6973 (https://www.rfc-
-   editor.org/info/rfc6973).
+5.  References
 
-   [RFC8280] ten Oever, N. and C.  Cath, "Research into Human Rights
-   Protocol Considerations", RFC 8280, DOI 10.17487/RFC8280, October
-   2017, https://www.rfc-editor.org/info/rfc8280 (https://www.rfc-
-   editor.org/info/rfc8280).
-
-   [RFC3552] Rescorla, E. and B.  Korver, "Guidelines for Writing RFC
-   Text on Security Considerations", BCP 72, RFC 3552, DOI 10.17487/
-   RFC3552, July 2003, https://www.rfc-editor.org/info/rfc3552
-   (https://www.rfc-editor.org/info/rfc3552).
-
-   [RFC7624] Barnes, R., Schneier, B., Jennings, C., Hardie, T.,
-   Trammell, B., Huitema, C., and D.  Borkmann, "Confidentiality in the
-   Face of Pervasive Surveillance: A Threat Model and Problem
-   Statement", RFC 7624, DOI 10.17487/RFC7624, August 2015,
-   https://www.rfc-editor.org/info/rfc7624 (https://www.rfc-
-   editor.org/info/rfc7624).
-
-   [RFC6462] Cooper, A., "Report from the Internet Privacy Workshop",
-   RFC 6462, DOI 10.17487/RFC6462, January 2012, https://www.rfc-
-   editor.org/info/rfc6462 (https://www.rfc-editor.org/info/rfc6462).
-
-   [RFC7844] Huitema, C., Mrugalski, T., and S.  Krishnan, "Anonymity
-   Profiles for DHCP Clients", RFC 7844, DOI 10.17487/RFC7844, May 2016,
-   https://www.rfc-editor.org/info/rfc7844 (https://www.rfc-
-   editor.org/info/rfc7844).
-
-   [RFC8446] Rescorla, E., "The Transport Layer Security (TLS) Protocol
-   Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
-   https://www.rfc-editor.org/info/rfc8446 (https://www.rfc-
-   editor.org/info/rfc8446).
-
-   [RFC7858] Hu, Z., Zhu, L., Heidemann, J., Mankin, A., Wessels, D.,
-   and P.  Hoffman, "Specification for DNS over Transport Layer Security
-   (TLS)", RFC 7858, DOI 10.17487/RFC7858, May 2016, https://www.rfc-
-   editor.org/info/rfc7858 (https://www.rfc-editor.org/info/rfc7858).
-
-   [RFC6235] Boschi, E. and B.  Trammell, "IP Flow Anonymization
-   Support", RFC 6235, DOI 10.17487/RFC6235, May 2011, https://www.rfc-
-   editor.org/info/rfc6235 (https://www.rfc-editor.org/info/rfc6235).
-
-   [RFC8165] Hardie, T., "Design Considerations for Metadata Insertion",
-   RFC 8165, DOI 10.17487/RFC8165, May 2017, https://www.rfc-
-   editor.org/info/rfc8165 (https://www.rfc-editor.org/info/rfc8165).
-
-   [RFC7011] Claise, B., Ed., Trammell, B., Ed., and P.  Aitken,
-   "Specification of the IP Flow Information Export (IPFIX) Protocol for
-   the Exchange of Flow Information", STD 77, RFC 7011, DOI 10.17487/
-   RFC7011, September 2013, https://www.rfc-editor.org/info/rfc7011
-   (https://www.rfc-editor.org/info/rfc7011).
-
-   [RFC6973] Cooper, A., Tschofenig, H., Aboba, B., Peterson, J.,
-   Morris, J., Hansen, M., and R.  Smith, "Privacy Considerations for
-   Internet Protocols", RFC 6973, July 2013, https://www.rfc-
-   editor.org/info/rfc6973 (https://www.rfc-editor.org/info/rfc6973).
-
-   [RFC7258] Farrell, S. and H.  Tschofenig, "Pervasive Monitoring Is an
-   Attack", BCP 188, RFC 7258, May 2014, https://www.rfc-
-   editor.org/info/rfc7258 (https://www.rfc-editor.org/info/rfc7258).
-
-   [RFC8280] ten Oever, N. and C.  Cath, "Research into Human Rights
-   Protocol Considerations", RFC 8280, October 2017, https://www.rfc-
-   editor.org/info/rfc8280 (https://www.rfc-editor.org/info/rfc8280).
-
-   [RFC3552] Rescorla, E. and B.  Korver, "Guidelines for Writing RFC
-   Text on Security Considerations", BCP 72, RFC 3552, July 2003,
-   https://www.rfc-editor.org/info/rfc3552 (https://www.rfc-
-   editor.org/info/rfc3552).
-
-   [RFC7624] Barnes, R., Schneier, B., Jennings, C., Hardie, T.,
-   Trammell, B., Huitema, C., and D.  Borkmann, "Confidentiality in the
-   Face of Pervasive Surveillance: A Threat Model and Problem
-   Statement", RFC 7624, August 2015, https://www.rfc-editor.org/info/
-   rfc7624 (https://www.rfc-editor.org/info/rfc7624).
-
-   [RFC6462] Cooper, A., "Report from the Internet Privacy Workshop",
-   RFC 6462, January 2012, https://www.rfc-editor.org/info/rfc6462
-   (https://www.rfc-editor.org/info/rfc6462).
-
-   [RFC7844] Huitema, C., Mrugalski, T., and S.  Krishnan, "Anonymity
-   Profiles for DHCP Clients", RFC 7844, May 2016, https://www.rfc-
-   editor.org/info/rfc7844 (https://www.rfc-editor.org/info/rfc7844).
-
-   [RFC8446] Rescorla, E., "The Transport Layer Security (TLS) Protocol
-   Version 1.3", RFC 8446, August 2018, https://www.rfc-editor.org/info/
-   rfc8446 (https://www.rfc-editor.org/info/rfc8446).
-
-   [RFC7858] Hu, Z., Zhu, L., Heidemann, J., Mankin, A., Wessels, D.,
-   and P.  Hoffman, "Specification for DNS over Transport Layer Security
-   (TLS)", RFC 7858, May 2016, https://www.rfc-editor.org/info/rfc7858
-   (https://www.rfc-editor.org/info/rfc7858).
-
-   [RFC6235] Boschi, E. and B.  Trammell, "IP Flow Anonymization
-   Support", RFC 6235, May 2011, https://www.rfc-editor.org/info/rfc6235
-   (https://www.rfc-editor.org/info/rfc6235).
-
-   [RFC8165] Hardie, T., "Design Considerations for Metadata Insertion",
-   RFC 8165, May 2017, https://www.rfc-editor.org/info/rfc8165
-   (https://www.rfc-editor.org/info/rfc8165).
-
-   [RFC7011] Claise, B., Ed., Trammell, B., Ed., and P.  Aitken,
-   "Specification of the IP Flow Information Export (IPFIX) Protocol for
-   the Exchange of Flow Information", STD 77, RFC 7011, September 2013,
-   https://www.rfc-editor.org/info/rfc7011 (https://www.rfc-
-   editor.org/info/rfc7011).
-
-5.  Normative References
+5.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -963,6 +858,66 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+5.2.  Informative References
+
+   [RFC3552]  Rescorla, E. and B. Korver, "Guidelines for Writing RFC
+              Text on Security Considerations", BCP 72, RFC 3552,
+              DOI 10.17487/RFC3552, July 2003,
+              <https://www.rfc-editor.org/rfc/rfc3552>.
+
+   [RFC6235]  Boschi, E. and B. Trammell, "IP Flow Anonymization
+              Support", RFC 6235, DOI 10.17487/RFC6235, May 2011,
+              <https://www.rfc-editor.org/rfc/rfc6235>.
+
+   [RFC6462]  Cooper, A., "Report from the Internet Privacy Workshop",
+              RFC 6462, DOI 10.17487/RFC6462, January 2012,
+              <https://www.rfc-editor.org/rfc/rfc6462>.
+
+   [RFC6973]  Cooper, A., Tschofenig, H., Aboba, B., Peterson, J.,
+              Morris, J., Hansen, M., and R. Smith, "Privacy
+              Considerations for Internet Protocols", RFC 6973,
+              DOI 10.17487/RFC6973, July 2013,
+              <https://www.rfc-editor.org/rfc/rfc6973>.
+
+   [RFC7011]  Claise, B., Ed., Trammell, B., Ed., and P. Aitken,
+              "Specification of the IP Flow Information Export (IPFIX)
+              Protocol for the Exchange of Flow Information", STD 77,
+              RFC 7011, DOI 10.17487/RFC7011, September 2013,
+              <https://www.rfc-editor.org/rfc/rfc7011>.
+
+   [RFC7258]  Farrell, S. and H. Tschofenig, "Pervasive Monitoring Is an
+              Attack", BCP 188, RFC 7258, DOI 10.17487/RFC7258, May
+              2014, <https://www.rfc-editor.org/rfc/rfc7258>.
+
+   [RFC7624]  Barnes, R., Schneier, B., Jennings, C., Hardie, T.,
+              Trammell, B., Huitema, C., and D. Borkmann,
+              "Confidentiality in the Face of Pervasive Surveillance: A
+              Threat Model and Problem Statement", RFC 7624,
+              DOI 10.17487/RFC7624, August 2015,
+              <https://www.rfc-editor.org/rfc/rfc7624>.
+
+   [RFC7844]  Huitema, C., Mrugalski, T., and S. Krishnan, "Anonymity
+              Profiles for DHCP Clients", RFC 7844,
+              DOI 10.17487/RFC7844, May 2016,
+              <https://www.rfc-editor.org/rfc/rfc7844>.
+
+   [RFC7858]  Hu, Z., Zhu, L., Heidemann, J., Mankin, A., Wessels, D.,
+              and P. Hoffman, "Specification for DNS over Transport
+              Layer Security (TLS)", RFC 7858, DOI 10.17487/RFC7858, May
+              2016, <https://www.rfc-editor.org/rfc/rfc7858>.
+
+   [RFC8165]  Hardie, T., "Design Considerations for Metadata
+              Insertion", RFC 8165, DOI 10.17487/RFC8165, May 2017,
+              <https://www.rfc-editor.org/rfc/rfc8165>.
+
+   [RFC8280]  ten Oever, N. and C. Cath, "Research into Human Rights
+              Protocol Considerations", RFC 8280, DOI 10.17487/RFC8280,
+              October 2017, <https://www.rfc-editor.org/rfc/rfc8280>.
+
+   [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
+              Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
+              <https://www.rfc-editor.org/rfc/rfc8446>.
 
 Acknowledgments
 
