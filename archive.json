@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-19T00:28:22.023069+00:00",
+  "timestamp": "2024-11-21T00:28:03.758997+00:00",
   "repo": "howethomas/privacy-primer-vcon",
   "labels": [
     {
@@ -56,24 +56,26 @@
       "id": "PR_kwDOMnddkc5-YzC4",
       "title": "Markdown and kramdown fixes",
       "url": "https://github.com/howethomas/privacy-primer-vcon/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "SteveLasker",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Markdown and Kramdown fixes. No content changes.\r\n\r\n- Each sentence on its own line for easy PR feedback and editing\r\n- Numbers are always 1, to make insertions and deletions isolated\r\n- Moved the informative text to the top section, letting kramdown do all the reference generation\r\n ",
       "createdAt": "2024-10-11T23:39:18Z",
-      "updatedAt": "2024-11-16T00:15:40Z",
+      "updatedAt": "2024-11-20T17:24:41Z",
       "baseRepository": "howethomas/privacy-primer-vcon",
       "baseRefName": "main",
       "baseRefOid": "a421820324abed7c6c441c2169c7aca6b2d48f9a",
       "headRepository": "SteveLasker/privacy-primer-vcon",
       "headRefName": "main",
       "headRefOid": "9010b04dca31b36b412311591d08032eed7e4bd9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-11-20T17:24:40Z",
+      "mergedAt": "2024-11-20T17:24:40Z",
+      "mergedBy": "howethomas",
+      "mergeCommit": {
+        "oid": "659308e204326e20c1a310929927b46af58f542b"
+      },
       "comments": [],
       "reviews": [
         {
@@ -82,7 +84,7 @@
             "abbreviatedOid": "bc457cd"
           },
           "author": "SteveLasker",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "Lots of great content. From a pure formatting perspective, I wasn't sure if \"\u00b6\" was intended to be kept, or was part of a copy/paste error. \r\n\r\nKramdown did complain the RFC references were in the appendix but not referenced in the doc. Might want to add the pointers with {{RFC1234}} sprinkled around, then check `make` for any errors for unused references.",
           "createdAt": "2024-10-11T23:39:58Z",
