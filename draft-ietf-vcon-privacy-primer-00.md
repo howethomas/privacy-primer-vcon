@@ -64,9 +64,9 @@ The goal is to provide a comprehensive overview of privacy considerations, align
 
 The democratization of technology has led to a surge of new entrants in the growing market of personal data management.
 These entrants, driven by various motives ranging from commerce and regulation to fraud prevention and charitable causes, are increasingly engaging with conversational data across network boundaries.
-The vCon (Virtual Conversation) represents a significant step forward in this landscape, enabling the ethical sharing of conversational data and fostering a rich ecosystem of services based on a novel concept: genuinely listening to what customers say.
+The vCon (Virtual Conversation) represents a significant step forward in this landscape, enabling the processing and ethical sharing of conversational data and fostering a rich ecosystem of services based on a novel concept: genuinely listening to what customers say.
 
-However, many of these new entrants may not inherently understand the ethical and legal complexities surrounding crucial topics such as data minimization, redaction, the right to know, and the right to erasure.
+However, many of these new entrants may not inherently understand the ethical and legal complexities surrounding crucial topics such as data minimization, legal basis for processing, redaction, the right to know, and the right to erasure.
 The design decisions behind the vCon framework directly address these concerns, incorporating features such as encryption capabilities, external data signing for change detection, and the creation of redacted versions that maintain a trail to the original data.
 
 ## Purpose of this Document
@@ -123,19 +123,19 @@ Data privacy, also known as information privacy or data protection, refers to th
 It involves ensuring that individuals have control over their own personal data and that organizations that collect, store, and process personal data do so in a manner that respects individuals' privacy rights.
 
 Data privacy laws and regulations vary by jurisdiction, but many countries and regions have enacted legislation to protect individuals' personal data.
-Examples of data privacy laws include the General Data Protection Regulation (GDPR) in the European Union, the California Consumer Privacy Act (CCPA) in the United States, and the Personal Data Protection Act (PDPA) in Singapore.
+Examples of data privacy laws include the General Data Protection Regulation (GDPR) in the European Union, the Health Insurance Portability and Accountability Act (HIPAA) and California Consumer Privacy Act (CCPA) in the United States, and the Personal Data Protection Act (PDPA) in Singapore.
 The U.S. data privacy legal landscape is a particularly complex patchwork of federal and state laws.
 It includes comprehensive state-level consumer privacy acts, industry-specific federal laws, and intricate pre-emption relationships between them, creating a fragmented and multifaceted regulatory environment.
 
 This document outlines common privacy rights and obligations as of the time of this writing (September, 2024) in alignment with fair information practices (FIP), which are widely recognized principles but may or may not be legally required, depending on the jurisdiction.
 The framework presented here offers a general understanding of data privacy principles but does not guarantee legal compliance in any specific region.
-Readers are encouraged to seek legal advice for their particular situations.
+Readers are encouraged to seek legal or technical advice for their particular jurisdiction, industry(-ies), and situations.
 
 ### Key Roles in Data Processing
 
 The following terms are used by the GDPR and in the privacy industry in general to define the three key roles in data processing:
 
-1. **Data Subject**: The individual whose personal information is being processed (also referred to as "consumer" in this RFC and many personal data privacy laws).
+1. **Data Subject**: The individual whose personal information is being processed (also referred to as “individual" in this RFC).
 2. **Data Controller**: An organization or individual with decision-making authority over data processing who determines the purposes and methods of data processing, bears primary responsibility under privacy laws and is the main target of most privacy and data protection regulations.
 3. **Data Processor**: Often a third-party service provider who processes data on behalf of the data controller. Under HIPAA, data processors are referred to as "business associates." Data processors may be hired for specialized tasks or to improve efficiency; can subcontract to other processors, creating a chain of responsibility; must operate within the scope defined by the data controller; and are expected to maintain trust and adhere to the controller's guidelines.
 
@@ -143,7 +143,7 @@ The relationship between these entities forms a hierarchy of responsibility and 
 The data controller sets the parameters for data use, while processors at various levels must operate within these boundaries.
 This structure ensures accountability and helps maintain data privacy throughout the information processing chain.
 
-### What Rights in Their Data do Consumers Have?
+### What Data Rights do Data Subjects Have?
 
 Regarding individual rights in data privacy, organizations should focus on six key areas:
 
@@ -152,14 +152,15 @@ Regarding individual rights in data privacy, organizations should focus on six k
     - Consent can be affirmative ("opt-in" consent) or presumed unless stated otherwise ("opt-out" consent). Opt-in consent is usually required for sensitive data and children's data (under 13 or 16 years old).
     - Consent can be written, oral, or implied.
     - In some jurisdictions, such as California, consent must be sought at or before the point of data collection.
+It should also be noted that consent layered (i.e. provided or one function but not others) and can be revoked at any time by the data subject and data controllers/processors need to act on this expediently. Consent Management is therefore a key requirement when handling personal data.
 3. **Access**: Organizations should offer mechanisms for consumers to access and correct their personal data. This empowers people to ensure their data is accurate and up-to-date.
 4. **Data Choices**: In addition to rights to access and correct, data subjects often have the following data privacy rights:
     - right to have their information deleted (also referred to as the "right to be forgotten");
     - right to port their data to a different data controller;
     - right to opt out of certain data practices, such as sale of their data, profiling, targeted/cross contextual behavioral advertising, automated decision-making.
 1. **Non-Discrimination**: Organizations must not discriminate against consumers who choose to exercise their data privacy rights.
-1. **Breach Notification**: The large amounts of data held by organizations attracts cyber criminals, increases the risk of data breaches.
-To mitigate the consequences of data breaches and incentivize advanced data security practices, most jurisdictions require prompt notification of affected individuals when breaches occur (within 30 days of discovery being the industry practice in the U.S.).
+1. **Breach Notification**: The large amounts of data held by organizations attract cyber criminals, increases the risk of data breaches.
+To mitigate the consequences of data breaches and incentivize advanced data security practices, most jurisdictions require reasonable security safeguards and prompt notification of affected individuals when breaches occur. Many regulatory bodies require notification from a data controller within 30 days of discovery. Controllers are also required to take prompt incident response measures to mitigate breaches and promptly inform and assist data subjects with breach mitigation.
 This holds organizations accountable for data security and allows individuals to take protective actions.
 
 By addressing these areas, organizations can respect individual privacy rights and build trust with their customers or users.
@@ -172,6 +173,7 @@ Data privacy laws protect personal information, though its scope can vary across
 - Basic identifiers: Name, addresses (postal and email), government-issued identification numbers
 - Digital identifiers: IP address (in some jurisdictions like California).
 - Financial Data: financial account number or credit or debit card number, often in combination with any required security code or password that would permit access to a data subject’s financial account.
+- Health data, including mental health or substance abuse information. Many healthcare identifiers are similar to other types of personal data (e.g., names and addresses), but others may refer to specialized information like health insurance details and medical codes.
 - Protected characteristics: Race, religion, disability, sexual orientation, national origin, etc.
 - Consumer behavior: Purchase history, product interests, consumption patterns.
 - Biometric data, including voiceprints, faceprints, fingerprints.
@@ -261,7 +263,7 @@ Organizations must remain vigilant and adopt a comprehensive approach to data pr
 ## Communications Privacy
 
 Communications privacy is a critical concern in our increasingly interconnected world, where various forms of communication – including audio, video, text messages, and emails – have become integral to both personal and professional interactions.
-Under the applicable laws, communications are protected when in transit and when stored.
+Under the applicable laws, communications are protected when in transit and  or at rest.
 
 Understanding the multifaceted legal and ethical frameworks around communications privacy is essential for anyone involved in capturing, storing, analyzing, or managing communications data.
 Communications privacy laws across various jurisdictions often share common elements, designed to protect individuals' privacy rights while balancing the needs of law enforcement and legitimate business interests.
@@ -281,9 +283,9 @@ The type of consent required (explicit or implied) may vary, but it has to be ob
 Moreover, using encryption may in some cases absolve the data processor from legal liability or at least mitigate it.
 
 Understanding these common provisions is crucial for compliance with communications privacy laws, regardless of the specific jurisdiction.
-However, it is important to note that the exact implementation and interpretation of these provisions can vary significantly between different legal frameworks.
+However, it is important to note that the exact implementation and interpretation of these provisions can vary significantly between different legal frameworks. 
 
-### Key Privacy Principles
+## Key Privacy Principles
 
 Data privacy and communications privacy are guided by similar principles, emphasizing consent, transparency, and data minimization while balancing privacy rights with societal interests.
 These areas aim to safeguard individuals' control over their personal information, whether stored or transmitted.
@@ -306,7 +308,7 @@ This may include encryption, access controls, and regular security assessments.
 1. **Individual Rights**: Individuals have certain rights regarding their personal data, including the right to access their data, the right to request corrections or deletions ("the right to be forgotten"), the right to object to certain uses of their data, and the right to data portability (the ability to transfer their data from one organization to another).
 1. **Data Integrity**: Personal data should be accurate, complete, up-to-date, and trustworthy throughout its lifecycle.
 The core principles of data integrity include consistency across systems, authenticity verification, and non-repudiation mechanisms.
-1. **Accountability**: Organizations are responsible for complying with data privacy laws and demonstrating compliance.
+1. **Accountability**: Organizations are responsible for complying with data privacy laws and demonstrating compliance. Organizations are also accountable for any downstream entities with which they may share personal data for a specific defined purpose. Companies must also ensure they monitor and periodically audit third parties with which they share personal data.
 This may involve conducting privacy impact assessments, appointing a data protection officer, and maintaining records of data processing activities.
 1. **Recordkeeping**: Maintain accurate logs of consumers' profiles, data decisions, and data usage, including sales and marketing campaigns and instances of data disclosure to third parties.
 
@@ -314,6 +316,24 @@ While data privacy and communications privacy share many principles, there are s
 Communications privacy laws often focus more on real-time interception and communication confidentiality, while data privacy laws address a broader range of data handling practices.
 
 As the digital landscape evolves, privacy laws must continually adapt to address emerging technologies and practices, ensuring the protection of personal information in our interconnected world.
+
+## Artificial Intelligence-Specific Considerations
+
+As vCons are likely to be used in the context of AI applications and services, either directly or tangentially, additional considerations are necessary due to the nascent regulatory environment regarding AI.
+
+One of the most advanced regulations around AI is currently the EU AI Act. In the U.S., of note is the Colorado AI Act. Various organizations, such as the National Institute of Standards and Technology (NIST), have also adopted guidance related to mitigating risks associated with AI use. The reader is advised to reference the law and guidelines appropriate to their use case and jurisdiction.
+
+The EU AI Act provides a comprehensive legal framework for the development, marketing, and use of AI in the EU to promote human-centric and trustworthy uses of AI while ensuring a high level of protection of health, safety and fundamental rights. The legislation adopts a risk-based approach, distinguishing between tiers of AI use cases: prohibited (such as behavioral manipulation and sensitive biometrics), high-risk (including critical infrastructure and medical devices), limited risk, and minimal risk, with each tier subject to regulatory requirements that scale from the strictest to the lightest, accordingly.
+
+For example, key requirements for High-Risk AI use cases under the EU AI Act include:
+ - stringent impact and conformity assessments and registration
+ - risk and quality management 
+ - human oversight
+ - strong data governance practices to not only mitigate bias but also ensure adequate controls of representative data used in training as well as production applications
+ - transparency through technical documentation and instructions
+ - privacy and data governance
+   
+As such, all of the previously discussed privacy and security measures apply and are supplemented with additional requirements. In particular, there is an increased emphasis on robust controls over data used for model testing and training, as well as the implementation of processes to ensure effective human oversight, including ongoing monitoring and auditing.
 
 # Security Considerations
 
