@@ -51,7 +51,7 @@ informative:
    RFC8446:
 
 --- abstract
-This document serves as a primer for technical professionals involved in collecting, using, and managing personal data, including not only basic identifiers like name, age, and address, but also sensitive data contained in communications, including biometrics obtained from audio and video recordings.
+This document serves as a primer for technical professionals involved in the processing (which includes collecting, using, disclosure, and erasure) of personal data, including not only basic identifiers like name, age, and address, but also sensitive data contained in communications, including biometrics obtained from audio and video recordings.
 It outlines key concepts in data privacy and communications privacy, addressing the ethical and legal considerations surrounding the collection, processing, sharing, access, retention, and disclosure of individuals’ data.
 The document covers fundamental privacy principles, defines important roles in data processing, and explains individuals’ rights regarding their personal information.
 It also discusses the scope of protected personal information, including sensitive data categories, and explores techniques like data aggregation and anonymization.
@@ -135,7 +135,7 @@ Readers are encouraged to seek legal or technical advice for their particular ju
 The following terms are used by the GDPR and in the privacy industry in general to define the three key roles in data processing:
 
 1. **Data Subject**: The individual whose personal information is being processed (also referred to as “individual" in this RFC and "consumer" in some data privacy laws).
-2. **Data Controller**: An organization or individual with decision-making authority over data processing who determines the purposes and methods of data processing, bears primary responsibility under privacy laws and is the main target of most privacy and data protection regulations.
+2. **Data Controller**: An organization or individual with decision-making authority over data processing who has the legal basis to process data and determines the purposes and methods of data processing, bears primary responsibility under privacy laws and is the main target of most privacy and data protection regulations.
 3. **Data Processor**: Often a third-party service provider who processes data on behalf of the data controller. Under HIPAA, data processors are referred to as "business associates." Data processors may be hired for specialized tasks or to improve efficiency; can subcontract to other processors, creating a chain of responsibility; must operate within the scope defined by the data controller; and are expected to maintain trust and adhere to the controller's guidelines.
 
 The relationship between these entities forms a hierarchy of responsibility and trust.
@@ -155,7 +155,7 @@ It should also be noted that consent can be layered (i.e. provided for one funct
 3. **Access**: Organizations should offer mechanisms for individuals to access and correct their personal data. This empowers people to ensure their data is accurate and up-to-date.
 4. **Data Choices**: In addition to rights to access and correct, data subjects often have the following data privacy rights:
     - right to have their information deleted (also referred to as the "right to be forgotten");
-    - right to port their data to a different data controller;
+    - right to download their data in a readily readable format and provide their data to a different data controller;
     - right to opt out of certain data practices, such as sale of their data, profiling, targeted/cross contextual behavioral advertising, automated decision-making.
 1. **Non-Discrimination**: Organizations must not discriminate against individuals who choose to exercise their data privacy rights.
 1. **Breach Notification**: The large amounts of data held by organizations attract cyber criminals, increases the risk of data breaches.
@@ -167,7 +167,7 @@ This approach aligns with many modern data protection regulations and best pract
 
 ### What Data Is Protected?
 
-Data privacy laws protect personal information, though its scope can vary across different laws. In general, the term "personal information" (also known as "personally identifiable information" or "PII") includes information that makes it possible to identify an individual or information about an "identified" or "identifiable" individual. Privacy laws may further extend the scope of PII: for example, the California Consumer Privacy Act's definition of PII includes information about an individual and the individual's household, as well as employment data. 
+Data privacy laws protect personal information, though its scope can vary across different laws. In general, the term "personal information" (also known as "personally identifiable information" or "PII") includes information that makes it possible to identify an individual or information about an "identified" or "identifiable" individual. Privacy laws may further extend the scope of PII: for example, the California Privacy Rights Act's definition of PII includes information about an individual and the individual's household, as well as employment data. 
 
 In general, examples of PII include:
 
@@ -203,7 +203,7 @@ An important subset of PII to consider in designing data privacy practices is so
 ### What Data Is Not Protected?
 
 The distinction between personal and nonpersonal information hinges on identifiability, meaning that personal data is identifiable and thus protected by most privacy laws when it can be reasonably linked to a particular person (or even computer or device).
-This boundary can be ambiguous, with varying interpretations across jurisdictions.
+This boundary has varying interpretations across jurisdictions.
 For instance, IP addresses are considered personal information by the EU and FTC, but not by U.S. federal agencies under the Privacy Act. Moreover, sometimes, deidentified data can be reidentified, introducing challenges to personal data protection.
 When identifying elements are removed from data, it becomes nonpersonal information, generally falling outside the scope of privacy and data protection laws.
 
