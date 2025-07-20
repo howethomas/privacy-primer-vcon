@@ -3,7 +3,7 @@ title: "Privacy Primer for vCon Developers"
 abbrev: "privacy primer"
 category: info
 
-docname: draft-ietf-vcon-privacy-primer-00
+docname: draft-ietf-vcon-privacy-primer-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
@@ -108,7 +108,7 @@ By achieving these goals, we aim to contribute to a more informed and responsibl
 
 ## Privacy and vCon – In General
 
-Privacy in general can be understood as "the right to be let alone" [Warren, S. D., & Brandeis, L. D. (1890). The Right to Privacy. Harvard Law Review, 4(5), 193-220]. It may be helpful to think of it in four aspects:
+Privacy in general can be understood as "the right to be let alone" [Warren1890]. It may be helpful to think of it in four aspects:
 
 1. personal information (or data) privacy,
 1. bodily privacy,
@@ -384,7 +384,7 @@ By addressing these security concerns and following the guidelines in the vCon s
 
 This document has no IANA actions.
 
-[Warren1890] Warren, S. D., & Brandeis, L. D., "The Right to Privacy", Harvard Law Review, 4(5), 193-220, 1890.
+[Warren1890] Warren, S.D. and Brandeis, L.D., "The Right to Privacy", Harvard Law Review, Vol. 4, No. 5, pp. 193-220, December 1890.
 --- back
 
 # Acknowledgments
